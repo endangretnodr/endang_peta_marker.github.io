@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar WebMap Leaflet</title>
+        <style>#map{
+            width: 1100px;
+            height: 1100px;
+        }
+            </style>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    </head>
+            <body>
+                <div id="map"></div>
+                <script>
+                var map = L.map('map').setView([-7.614518, 110.283094], 13)
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 13,
+        attribution: '© OpenStreetMap'
+        }).addTo(map) ;
+        
+        map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/512/25/25694.png',
+        iconSize:[30,30],
+    }) ;
+    L.marker([-7.614518, 110.283094],{icon:marker1}) .bindPopup('<b>Rumah</b>') .addTo(map);
+        function onMapClick (e) {
+        L.popup ()
+            .setLatLng(e.latlng)
+            .setContent('Koordinat di sini' +' '+ e.latlng.toString())
+            .openOn(map);
+    }
+
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+    }) ;
+    L.marker([-7.58641764090938, 110.27546736882964],{icon:marker1}) .bindPopup('<b>RSU. Padma Lalita</b><br>Jl. Klangon KM. 1, Growong, Pucungrejo, Kec. Muntilan, Kabupaten Magelang, Jawa Tengah 56414</br>') .addTo(map);
+    
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+    }) ;
+    L.marker([-7.584723, 110.28526],{icon:marker1}) .bindPopup('<b>RS Aisyiyah Muntilan</b><br>Jl. Kh Ahmad Dahlan No.24, Kenalan, Pucungrejo, Kec. Muntilan, Kabupaten Magelang, Jawa Tengah 56414</br>') .addTo(map);
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+    }) ;
+    L.marker([-7.569419564832867, 110.28281644194998],{icon:marker1}) .bindPopup('<b>Rumah Sakit N21 Gemilang</b><br>Jl. Nasional No.14 3, Karangwatu, Pucungrejo, Kec. Muntilan, Kabupaten Magelang, Jawa Tengah 56414</br>') .addTo(map);
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+    }) ;
+    L.marker([-7.576299819295106, 110.27138455042943],{icon:marker1}) .bindPopup('<b>Rumah Sakit PKU Mumahammadiyah Grabag</b><br>Siraj, Jl. Kyai Panjang Ponggol No.20B, Gatak Lamar, Pucungrejo, Grabag, Magelang Regency, Central Java 54265</br>') .addTo(map);
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+    }) ;
+    L.marker([-7.583284, 110.291214],{icon:marker1}) .bindPopup('<b>RSUD Muntilan</b><br> Jl. Kartini No.13, Balemulyo, Muntilan, Kec. Muntilan, Kabupaten Magelang, Jawa Tengah 56411</br>') .addTo(map);
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+        iconAnchor:[10,20],
+    }) ;
+    L.marker([-7.575793668639658, 110.28520528793022],{icon:marker1}) .bindPopup('<b>klinik utama KARYA RINI</b><br> Ponalan Baru Gang 3, Kwirah, Tamanagung, Kec. Muntilan, Kabupaten Magelang, Jawa Tengah 56413</br>') .addTo(map);
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+    }) ;
+    L.marker([-7.625445138107203, 110.32095967544959],{icon:marker1}) .bindPopup('<b>Balai Pengobatan PKU Muhammadiyah Salam</b><br> 98CC+M7V, Krakitan,, Sucen Kidul, Sucen, Kec. Salam, Kabupaten Magelang, Jawa Tengah 56484</br>') .addTo(map);
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+    }) ;
+    L.marker([-7.6225836703539525, 110.31302045695978],{icon:marker1}) .bindPopup('<b>UPT Puskesmas Salam</b><br> Magelang-Yogya No.21, Semen, Sucen, Kec. Salam, Kabupaten Magelang, Jawa Tengah 56484</br>') .addTo(map);
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+    }) ;
+    L.marker([-7.625302065173873, 110.32023792831416],{icon:marker1}) .bindPopup('<b>Klinik Pratama Aisyiyah Siti Khadijah Salam</b><br>Krakitan,, Sucen Kidul, Sucen, Kec. Salam, Kabupaten Magelang, Jawa Tengah 56484</br>') .addTo(map);
+    map.on('click', onMapClick);
+    var marker1 = L.icon({
+        iconUrl:'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+        iconSize:[20,20],
+    }) ;
+    L.marker([-7.609720998186525, 110.30439429869422],{icon:marker1}) .bindPopup('<b>Klinik Daqu Sehat</b><br>Jl. Magelang - Yogyakarta No.21, Tegalsari, Jumoyo, Kec. Salam, Kabupaten Magelang, Jawa Tengah 56484</br>') .addTo(map);
+        </script>
+        
+            </body>
+</html>
